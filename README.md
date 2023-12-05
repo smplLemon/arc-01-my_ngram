@@ -12,7 +12,6 @@ This project provides an alternative approach to traditional text processing met
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [The Core Team](#the_core_team)
 
 ## Task
@@ -50,21 +49,33 @@ Order will be alphanumerical.
 
 The My Ngram project should meet the following requirements:
 
-Functional Requirements
+Functional requirements
 
-- The project should implement an Ngram language model in C.
-- The project should support unigram, bigram, and higher-order Ngram models.
-- The project should allow users to specify the order of the Ngram model.
-- The project should allow users to load an Ngram language model from a file.
-- The project should allow users to generate a sample text sequence using an Ngram language model.
+- Your code must be compiled with -Wall -Wextra -Werror flags.
+- Your makefile must be clean and have fclean rules.
 
-Non-Functional Requirements
+Non-functional requirements
 
-- The project should be written in C and should compile and run on a compliant operating system.
-- The project should be efficient in its memory usage and processing time.
-- The project should be easy to use and should have a well-documented codebase.
+- The project must be written and compiled in C and run on a compatible operating system.
+- The project must be efficient at the time of dispatch and delivery from memory.
+- The project should be easy and have a well-documented code base.
 
 ## Installation
+
+You must have the C compiler installed to run this program.
+If you don't have a C compiler, you can install the **gcc** compiler on Windows/Linux by running the following command:
+
+```
+mingw-get install gcc.
+```
+
+```
+sudo apt-get install build-essential
+```
+
+For Windows users, you can install **MinGW**, which includes the **gcc** compiler.
+
+## Usage
 
 To start using the My Ngram project, follow these steps:
 
@@ -81,27 +92,7 @@ To start using the My Ngram project, follow these steps:
 
 4. Run the compiled executable:
 
-   ./my_ngram
-
-## Usage
-
-To use the My Ngram project, you can simply run the compiled executable without any command-line arguments:
-
-1. ./my_ngram
-
-Alternatively, you can specify a file to be processed by providing its path as a command-line argument:
-
-1. ./my_ngram path/to/your/file.txt
-
-By default, the program generates unigrams. To generate higher order Ngrams, you can set the N value by using the -n option:
-
-1. ./my_ngram -n 2
-
-In this example, the program will generate bigrams.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+   ./my_ngr
 
 ## The Core Team
 
