@@ -27,8 +27,8 @@ N-grams are sequences of n elements in a given sample of text or speech. This pr
 2. Clone this repository using `git clone https://github.com/darmanovjakhongir/arc-01-my_ngram`.
 3. Navigate to the project directory using `cd arc-01-my_ngram`.
 4. Build the project using `make`.
-5. Run the following command to compile the program `gcc ngram.c -o ngram`.
-6. Now you can run the program using the following command `./ngram`.
+5. Run the following command to compile the program `gcc my_ngram.c -o my_ngram`.
+6. Now you can run the program using the following command `./my_ngram`.
 
 ## Usage
 
