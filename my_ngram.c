@@ -1,52 +1,28 @@
-#include <stdio.h> 
-#include <stdlib.h> 
- 
-#define MAX_ARRAY_SIZE 128 
- 
-int my_strlen(char* str) 
-{ 
-    int i = 0; 
-    while (str[i] != '\0') 
-    { 
-        i += 1; 
-    } 
-    return i; 
-} 
-void fill_array(int* array, char* str) 
-{ 
-    int index = 0; 
-    while (str[index] != '\0') 
-    { 
-        if (str[index] != '"') 
-        { 
-            array[(int)str[index]] += 1; 
-        } 
-        index += 1; 
-    } 
- 
-} 
-void print_array(int* array, int size_array) 
-{ 
-    int index = 0; 
-    
-    while (index < size_array) 
-    { 
-        if (array[index] > 0) 
-        { 
-            printf("%c:%i\n", index, array[index]); 
-        } 
-        index += 1; 
-    } 
-} 
-int main(int ac, char** av) 
-{ 
-    int index = 1; 
-    int array[MAX_ARRAY_SIZE] = {0}; 
-    while (index < ac) 
-    { 
-        fill_array(&array[0], av[index]); 
-        index += 1; 
-    } 
-    print_array(&array[0], MAX_ARRAY_SIZE); 
-    return EXIT_SUCCESS; 
+#include <stdio.h>
+#include <string.h>
+int my_strlen(char* param_1) 
+{
+    int length = 0;
+    while(param_1[length] != '\0'){
+       length++;
+    }
+    return length;
+}
+
+int main(int argc, char** argv) 
+{
+    int str[127] = {0}; 
+    for(int i = 1; i < argc; i++) {
+        for (int j = 0; j < my_strlen(argv[i]); j++) {
+            str[(int)(argv[i][j])]++;
+        }
+    }
+
+    for(int i = 0; i < 127; i++){
+        if (str[i] > 0) {
+            printf("%c:%d\n", i, str[i]);
+        }
+    }
+
+    return 0;
 }
