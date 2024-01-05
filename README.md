@@ -7,8 +7,7 @@ The my_mix_array function takes the number of command-line arguments (args) and 
 In the main function, my_mix_array is called with the argc and argv arguments to calculate the n-gram frequencies for the concatenated command-line arguments.
 
 To use this code, you can compile it and run the resulting executable from the command line. For example:
-
-gcc ngram.c -o ngram
+ make
 ./ngram argument1 argument2 
 Replace argument1, argument2, and so on with the desired command-line arguments. The code will calculate the n-gram frequencies for all the concatenated command-line arguments and print the results.
 
