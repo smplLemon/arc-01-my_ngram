@@ -13,6 +13,7 @@ void my_ngram(int size, char** arr)
         }
     }
     
+    
     for (int i = 0; i < 127; i++) 
     {
         if (kl_arr[i] != 0) 
