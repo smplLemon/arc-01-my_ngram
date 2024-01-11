@@ -1,142 +1,58 @@
-# arc-01-my_ngram
-<div class="card-block">
-<div class="row">
-<div class="col tab-content">
-<div class="tab-pane active show" id="subject" role="tabpanel">
-<div class="row">
-<div class="col-md-12 col-xl-12">
-<div class="markdown-body">
-<p class="text-muted m-b-15">
-</p><h1>My Ngram</h1>
-<p>Remember to git add &amp;&amp; git commit &amp;&amp; git push each exercise!</p>
-<p>We will execute your function with our test(s), please DO NOT PROVIDE ANY TEST(S) in your file</p>
-<p>For each exercise, you will have to create a folder and in this folder, you will have additional files that contain your work. Folder names are provided at the beginning of each exercise under <code>submit directory</code> and specific file names for each exercise are also provided at the beginning of each exercise under <code>submit file(s)</code>.</p>
-<hr>
-<table>
-<thead>
-<tr>
-<th>My Ngram</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Submit directory</td>
-<td>.</td>
-</tr>
-<tr>
-<td>Submit files</td>
-<td>Makefile - *.c - *.h</td>
-</tr>
-<tr>
-<td>Languages</td>
-<td>It needs to be completed in the language you are working on right now. If you are doing Bootcamp Javascript, then javascript (file extension will be .js). If you are doing Bootcamp Ruby, then Ruby (file extension will be .rb). It goes the same for Python, Java, C++, Rust, ...</td>
-</tr>
-</tbody>
-</table>
-<h3>Description</h3>
-<h3>SPECIFICATIONS</h3>
-<p>Write a program my_ngram; It will count the number of occurrences per character.</p>
-<h3>NAME</h3>
-<p>my_ngram</p>
-<h3>SYNOPSIS</h3>
-<p>my_ngram text [text2, text3]</p>
-<h3>DESCRIPTION</h3>
-<p>In computational linguistics and probability, an n-gram is a contiguous sequence of n items from a given sample of text or speech. The items can be phonemes, syllables, letters, words or base pairs according to the application. The n-grams typically are collected from a text or speech corpus. When the items are words, n-grams may also be called shingles.</p>
-<p>Google Inc. has used this technique to improve the completion of its Search Engine. The program was developed by Jon Orwant and Will Brockman and released in mid-December 2010.</p>
-<p>My Ngram will take 1 or multiple strings as arguments.</p>
-<p>It will display, one per line, each character and the numbers of times it appears.</p>
-<p>Order will be alphanumerical.</p>
-<p><strong>Example 00</strong></p>
-<pre class=" language-plain"><code class=" language-plain">$&gt;./my_ngram "abcdef"
-a:1
-b:1
-c:1
-d:1
-e:1
-f:1
-$&gt;
-</code></pre>
-<p><strong>Example 01</strong></p>
-<pre class=" language-plain"><code class=" language-plain">$&gt;./my_ngram "        "
- :8
-$&gt;
-</code></pre>
-<p>8 spaces :-)</p>
-<p><strong>Example 02</strong></p>
-<pre class=" language-plain"><code class=" language-plain">$&gt;./my_ngram "aaabb" "abc"
-a:4
-b:3
-c:1
-$&gt;
-</code></pre>
-<h3>Technical information:</h3>
-<ol>
-<li>(If you are doing this as project) you must create a Makefile, and the output is the command itself</li>
-<li>You can use:</li>
-</ol>
-<ul>
-<li>printf(3)</li>
-<li>write(2)</li>
-</ul>
-<ol start="3">
-<li>You can NOT use:</li>
-</ol>
-<ul>
-<li>Any functions/syscalls which does not appear in the previous list</li>
-<li>Yes, it includes <strong>exit</strong>
-</li>
-<li>Multiline macros are forbidden</li>
-<li>Include another .c is forbidden</li>
-<li>Macros with logic (while/if/variables/...) are forbidden</li>
-</ul>
-<h3>Requirements</h3>
-<ul>
-<li>Your code must be compiled with the flags <strong>-Wall -Wextra -Werror</strong>.</li>
-<li>Your makefile must have a clean &amp; fclean rules.</li>
-</ul>
-<p>Example of some rules for Makefiles:</p>
-<pre class=" language-plain"><code class=" language-plain">all : $(TARGET)
+# Welcome to My Ngram
+***
 
-$(TARGET) : $(OBJ)
-	gcc $(CFLAGS) -o $(TARGET) $(OBJ)
+## Task
 
-$(OBJ) : $(SRC)
-	gcc $(CFLAGS) -c $(SRC)
+Based on the specifications and requirements provided, you need to create a C program called my_ngram that takes one or multiple strings as arguments
+and counts the number of occurrences per character. The output should display each character and the number of times it appears, in alphanumerical order. 
+Your program should be compiled with the flags -Wall -Wextra -Werror, and your makefile should have a clean and fclean rule.
+Here's an example implementation of my_ngram that meets the specifications and requirements.
+In this implementation, we first initialize an array called counts with size 256 (which is the number of possible characters in ASCII) and set all counts to 0. 
+We then loop through all arguments (excluding the program name) and all characters in each argument, incrementing the count for each character in the counts array. 
+Finally, we loop through all counts and print out the non-zero counts in alphanumerical order.
 
+## Description
+
+This Makefile has a rule to compile the my_ngram program with the specified flags and dependencies, as well as rules for cleaning up object and binary files. 
+To compile the program, you can simply run make, and to clean up object and binary files, you can run make clean or make fclean.
+The code you provided is a Makefile. Make is a utility that automatically builds executable programs and libraries from source code by reading files called Makefiles,
+ which specify how to derive the target program. The Makefile consists of rules that tell the make utility how to build the target program. 
+ Here is a brief explanation of each line of the Makefile you provided
+
+## Installation
+
+CFLAGS = -g -Wall -Wextra -Werror
+This line sets the compilation flags. -g adds debugging information to the executable, -Wall enables all compiler warnings, -Wextra enables additional compiler warnings, and -Werror treats warnings as errors.
+This line is a rule that specifies how to build the $(TARGET) executable. It depends on the $(SRC) rule, which is the source file(s) for the program. 
+The $@ and $^ are automatic variables that represent the target and dependencies of the rule, respectively. This line tells the make utility to compile $(SRC) using $(CC) with $(CFLAGS), and output the executable to $(TARGET).
+
+## Usage
+
+This line is a phony target. It specifies that fclean is not a file, but a rule. Phony targets are typically used for housekeeping tasks like cleaning the project directory.
+
+makefile
+Copy code
 clean:
-	rm -f *.o
+    rm -f $(TARGET)
+This line is a rule that specifies how to clean the project directory. It removes the $(TARGET) executable file.
 
+makefile
+Copy code
 fclean: clean
-	rm -f $(TARGET)
+This line is a rule that specifies how to force-clean the project directory. It depends on the clean rule, and removes any files created during the build process.
 
+makefile
+Copy code
 re: fclean all
-</code></pre>
-<h3>Warnings</h3>
-<p>It's a bad practice to submit "object/binary files". Gandalf will reject your project if you submit your binary. (with the following message: "pushed file wrong format")</p>
-<p></p>
-</div>
+This line is a rule that specifies how to rebuild the project. It depends on the fclean and all rules, and removes any existing files, then builds the executable from scratch.
 
-</div>
-</div>
-</div>
-<div class="tab-pane" id="resources" role="tabpanel">
-<div class="row">
-<div class="col-xl-12">
-<div class="row text-center">
-<div class="col p-t-10 f-12">
-<p>
+I hope this explanation helps! Let me know if you have any further questions.
 
-</p>
-</div>
-</div>
-<div class="row text-center">
-<div class="col">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+
+
+### The Core Team
+
+
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
