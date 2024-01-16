@@ -5,7 +5,7 @@
 char *string(int argc, char **argv)
 {
     int len = argc;
-    for (int i = 1; argv[i] > 0; i++)
+    for (int i = 1; argv[i] != 0; i++)
     {
         for (int j = 0; argv[i][j]; j++)
         {
@@ -13,7 +13,7 @@ char *string(int argc, char **argv)
         }
     }
 
-    char *result = malloc(len * sizeof(char));
+    char *result = malloc(len + 1 * sizeof(char));
     char *current = result;
 
     for (int i = 1; i < argc; i++)
@@ -32,10 +32,10 @@ int main(int argc, char **argv)
 {
     char *str = string(argc, argv);
     int counter;
-    for (char character = ' '; character < +'z'; character++)
+    for (char character = ' '; character <= 'z'; character++)
     {
         counter = 0;
-        for (int i = 0; i < strlen(str); i++)
+        for (size_t i = 0; i < strlen(str); i++)
         {
             if (character == str[i])
             {
