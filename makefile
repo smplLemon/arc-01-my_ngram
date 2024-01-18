@@ -1,26 +1,19 @@
- CC = gcc
- CFLAGS = -g -Wall -Wextra -Werror
- SOURCE = my_ngram.c
- TARGET = my_ngram
-OBJS = $(SRCS:=.c)
-EXECUTABLE = program
+CC := gcc
+CFLAGS := -Wall -Wextra
+
+TARGET :=my_ngram
+SRCS :=my_ngram.c
+OBJS := $(SRCS:.c=.o)
 
 .PHONY: all clean
- all: $(TARGET)
 
-$(TARGET): $(OBJ)
- 	gcc $(CFLAGS) -o $(TARGET) $(OBJ)
+all: $(TARGET)
 
-$(OBJ): $(SRC)
- 	gcc $(CFLAGS) -c $(SRC)
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
 
-
- .PHONY: fclean
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -r *.o
-
- fclean: clean
- 	@rm -r $(TARGET)
-
- re: fclean all
+	@rm -f $(OBJS) $(TARGET)
