@@ -1,4 +1,3 @@
-
 #include <stdio.h> 
 int main(int elment_1, char* elment_2[]) {
     int just[128] = {0};
