@@ -27,7 +27,7 @@ b:3
 c:1
 $&gt;
 </code></pre>
-<h3>Technical information:</h3>
+<h3>Rules:</h3>
 <ol>
 <li>(If you are doing this as project) you must create a Makefile, and the output is the command itself</li>
 <li>You can use:</li>
@@ -37,7 +37,7 @@ $&gt;
 <li>write(2)</li>
 </ul>
 <ol start="3">
-<li>You can NOT use:</li>
+<li>NOT use:</li>
 </ol>
 <ul>
 <li>Any functions/syscalls which does not appear in the previous list</li>
@@ -47,53 +47,12 @@ $&gt;
 <li>Include another .c is forbidden</li>
 <li>Macros with logic (while/if/variables/...) are forbidden</li>
 </ul>
-<h3>Requirements</h3>
-<ul>
-<li>Your code must be compiled with the flags <strong>-Wall -Wextra -Werror</strong>.</li>
-<li>Your makefile must have a clean &amp; fclean rules.</li>
-</ul>
-<p>Example of some rules for Makefiles:</p>
-<pre class=" language-plain"><code class=" language-plain">all : $(TARGET)
-
-$(TARGET) : $(OBJ)
-	gcc $(CFLAGS) -o $(TARGET) $(OBJ)
-
-$(OBJ) : $(SRC)
-	gcc $(CFLAGS) -c $(SRC)
-
-clean:
-	rm -f *.o
-
-fclean: clean
-	rm -f $(TARGET)
-
-re: fclean all
-</code></pre>
-<h3>Warnings</h3>
-<p>It's a bad practice to submit "object/binary files". Gandalf will reject your project if you submit your binary. (with the following message: "pushed file wrong format")</p>
-<p></p>
-</div>
-
-</div>
-</div>
-</div>
-<div class="tab-pane" id="resources" role="tabpanel">
-<div class="row">
-<div class="col-xl-12">
-<div class="row text-center">
-<div class="col p-t-10 f-12">
-<p>
-
-</p>
-</div>
-</div>
-<div class="row text-center">
-<div class="col">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<h3>Installation</h3>
+If you want to work with is project you need this libraries
+```
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+```
+Dont worry I have already included thise libraries, so you shoud just run it!
