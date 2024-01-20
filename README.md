@@ -1,11 +1,4 @@
-<h3>Description</h3>
-<h3>SPECIFICATIONS</h3>
-<p>Write a program my_ngram; It will count the number of occurrences per character.</p>
-<h3>NAME</h3>
-<p>my_ngram</p>
-<h3>SYNOPSIS</h3>
-<p>my_ngram text [text2, text3]</p>
-<h3>DESCRIPTION</h3>
+<h3>Task</h3>
 <p>In computational linguistics and probability, an n-gram is a contiguous sequence of n items from a given sample of text or speech. The items can be phonemes, syllables, letters, words or base pairs according to the application. The n-grams typically are collected from a text or speech corpus. When the items are words, n-grams may also be called shingles.</p>
 <p>Google Inc. has used this technique to improve the completion of its Search Engine. The program was developed by Jon Orwant and Will Brockman and released in mid-December 2010.</p>
 <p>My Ngram will take 1 or multiple strings as arguments.</p>
