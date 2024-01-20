@@ -50,11 +50,11 @@ $&gt;
 <h3>Installation</h3>
 If you want to work with is project you need this libraries
 <br>
-`#include <stdio.h>`
- <br>
-`#include <string.h>`
- <br>
-`#include <unistd.h>`
- <br>
-`#include <stdlib.h>`
+ <ol>
+  <li>#include <stdio.h></li>
+  <li>#include <string.h></li>
+  <li>#include <unistd.h></li>
+  <li>#include <stdlib.h></li>
+</ol>
+  <br>
 Dont worry I have already included thise libraries, so you shoud just run it!
