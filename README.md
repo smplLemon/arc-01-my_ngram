@@ -58,3 +58,10 @@ If you want to work with is project you need this libraries
 </ol>
   <br>
 Dont worry I have already included thise libraries, so you shoud just run it!
+
+<h3>Usage</h3>
+For runnig this project do thise insted
+<ol>
+  <li>gcc -o output my_ngram.c</li>
+  <li>./output "your text"</li>
+</ol>
