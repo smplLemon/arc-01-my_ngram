@@ -49,10 +49,12 @@ $&gt;
 </ul>
 <h3>Installation</h3>
 If you want to work with is project you need this libraries
-```
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
-```
+<br>
+`#include <stdio.h>`
+ <br>
+`#include <string.h>`
+ <br>
+`#include <unistd.h>`
+ <br>
+`#include <stdlib.h>`
 Dont worry I have already included thise libraries, so you shoud just run it!
