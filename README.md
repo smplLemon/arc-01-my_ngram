@@ -1,12 +1,3 @@
-# arc-01-my_ngram
-<div class="card-block">
-<div class="row">
-<div class="col tab-content">
-<div class="tab-pane active show" id="subject" role="tabpanel">
-<div class="row">
-<div class="col-md-12 col-xl-12">
-<div class="markdown-body">
-<p class="text-muted m-b-15">
 </p><h1>My Ngram</h1>
 <p>Remember to git add &amp;&amp; git commit &amp;&amp; git push each exercise!</p>
 <p>We will execute your function with our test(s), please DO NOT PROVIDE ANY TEST(S) in your file</p>
