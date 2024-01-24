@@ -1,10 +1,18 @@
-CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-TARGET = word_count
-all: $(TARGET)
+OUTNAME = my_ngram
+TARGET = my_ngram.c
 
-$(TARGET): word_count.c
-	$(CC) $(CFLAGS) -o $@ $^
+
+all : start
+
+start : $(TARGET)
+ gcc $(CFLAGS) $(TARGET) -o $(OUTNAME)
+ ./$(OUTNAME)
+
 clean:
-	rm -f $(TARGET)
+ rm -rf *.out $(OUTNAME)
 
+fclean: clean
+ rm -f compilication
+
+re: fclean all
