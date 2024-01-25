@@ -1,25 +1,15 @@
+TARGET = my_ngram
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-TARGET = dastur
-
-SRCS = main.c
-
-OBJS = $(SRCS:.c=.o)
+SRC = my_ngram.c
+OBJ = $(SRC:.c=.o)
 
 all: $(TARGET)
 
-$(TARGET): $(OBJS)
- $(CC) $(CFLAGS) -o $@ $(OBJS)
-
-%.o: %.c
- $(CC) $(CFLAGS) -c $< -o $@
-
+$(TARGET): $(OBJ)
+    $(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
+$(OBJ): $(SRC)    $(CC) $(CFLAGS) -c $(SRC)
 clean:
- rm -f $(OBJS)
-
-fclean: clean
- rm -f $(TARGET)
-
+    rm -f $(OBJ)
+fclean: clean    rm -f $(TARGET)
 re: fclean all
-
-.PHONY: all clean fclean re
