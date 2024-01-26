@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
     int cnt;
     int g;
 
-    for (char charc = 97; charc < 122; charc++) {
+    for (char charc = 0; charc < 127; charc++) {
         cnt = 0;
 
         for (int i = 1; i < argc; i++) {
