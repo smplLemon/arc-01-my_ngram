@@ -1,5 +1,5 @@
 ## Description
-This C program is created to calculate the occurrences of specific character in collection of strings passed as command-line arguments. The program iterates through the ASCII values for lowercase English letters (from 'a' to 'z') and counts the occurrences of each letter in the provided strings. If an occurrence is found, the program prints the character and its countself.
+This C program is created to calculate the occurrences of specific character in collection of strings passed as command-line arguments. The program iterates through the ASCII values for lowercase English letters (from '0' to '127') and counts the occurrences of each letter in the provided strings. If an occurrence is found, the program prints the character and its countself.
 
 ## Task
 The primary task of this program is to analyse multiple strings and output the count of each lowercase English letter present in those strings. The counting function (con) receives a string and a character as parameter, returning the number of occurrences of the specified character in the string. The main function then iterates through the command-line arguments, accumulating counts for each character, and prints the result for characters with non-zero counts.
