@@ -1,12 +1,14 @@
 ## Description
-this program count every elements. for instance when you enter
-"hello world" it should count elements that there are how many "h" or "o" etc. it gives some comfortability to you.
+This C program is created to calculate the occurrences of specific character in collection of strings passed as command-line arguments. The program iterates through the ASCII values for lowercase English letters (from 'a' to 'z') and counts the occurrences of each letter in the provided strings. If an occurrence is found, the program prints the character and its countself.
 
 ## Task
-the task which is given to me to perform that i must write a program as i mentioned it have to calculate all elements and console like "b:2"
-that when element of "b" is came for twice.
+The primary task of this program is to analyse multiple strings and output the count of each lowercase English letter present in those strings. The counting function (con) receives a string and a character as parameter, returning the number of occurrences of the specified character in the string. The main function then iterates through the command-line arguments, accumulating counts for each character, and prints the result for characters with non-zero counts.
 
 ## Usage
-to use you have to enter element for example "my ngram task" when enter like this it must be count every element and console it. the required thing from you is enter elements. 
+Compile the code: gcc character_counter.c -o character_counter
+Run the executable with input strings: ./character_counter string1 string2 string3 ...
+
+Replace string1, string2, string3, etc., with strings you want to analyze.
 
 ## Installation
+You need to intall C compiler such as GCC you can compile by c compiler because this program written in C language.
