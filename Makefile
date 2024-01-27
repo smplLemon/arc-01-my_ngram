@@ -1,12 +1,11 @@
 CC = gcc
 CFLAGS = -g -Wall -Wextra -Werror
-SOURCES = my_ngram.c
+COURCES = my_ngram.c
 TARGET = my_ngram
 
-$(TARGET): $(SOURCES)
-	$(CC) $(CFLAGS) -o $@ $^
-
-.PHONY: clean
-
+$(TARGET):$(COURCES)
+  $(CC) $(CFLAGS) -o $@ $^
 clean:
-	rm -f $(TARGET)
+  rm -f *.o
+fclean: clean
+  rm -f $(TARGET)
