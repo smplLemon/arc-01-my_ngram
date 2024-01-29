@@ -3,32 +3,26 @@
 
 ## Task
 What is the problem? And where is the challenge?
-Mainly the trouble I had was creating the makefile and saving the enumerable characters!
+In fact, I did not have any problems with this assignment. Because this issue is the first, in my opinion, it was made very easy. But I thought a bit about how to validate characters and it was difficult to do in C until I learned to use an ASCI table.
 
 
 ## Description
 How have you solved the problem?
-I was wondering how to store the chars as many times as they came! 
-But I found out that it is very easy! I put them in an array of 128 characters! 
-Makephilham isn't as hard as I thought!
+By using the ASCII table I compared the characters to each other and the ASCII table helped me solve my problem. This is not only the only solution for everyone who wants to solve this problem
 
 
 ## Installation
 How to install your project? npm install? make? make re?
-I used the standard libraries <stdio.h> , <string.h> and created my first library "mylib.h"!
+You can use the "make" file to run this program
 
 
 ## Usage
-How does it work?But they won't flower like they did last spring
-In my program i used a "for" loop to find how many times each character is repeated. During the development of this program, I got a lot of benefits from the ASCII table and learned about its many features. I wrote my functions in a separate file in this 
-program and found that it made the programming process very easy! I also wrote a Makefile that allows me to 
-run all the files for all my projects at once!
+How does it work? But they won't flower like they did last spring
+in my program I used a "for" loop to find how many times each character is repeated. During the development of this program, I got a lot of benefits from the ASCII table and learned about its many features. I wrote my functions in a separate file in this 
+program and found that it made the programming process very easy! I also wrote a Makefile that allows me to run all the files for all my projects at once!
 
-
-
-```
 ./my_project argument1 argument2
-```
+
 
 ### The Core Team
 
