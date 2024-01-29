@@ -9,7 +9,7 @@ This code counts the number of letters in the given command line arguments and p
 - If the count value is greater than 0, that is, the letter is found at least once, then this letter and its number are printed on the screen.
 - In this way, the code counts the number of characters in the command line arguments and prints the result to the screen.
 # Task
-The code is used to take arguments from the user's command line and count the number of letters between the arguments. Checks the list of letters in each argument and counts the number of each letter.
+- The code is used to take arguments from the user's command line and count the number of letters between the arguments. Checks the list of letters in each argument and counts the number of each letter.
 # Usage
 - The structure of the code is very simple. The letters in the arguments are checked and calculated using two inner loops. Then, the number of each letter is printed on the screen.
 # Installation
