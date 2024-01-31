@@ -1,12 +1,17 @@
 CC = gcc
-CFLAGS = -g -Wall -Wextra -Werror
-SOURCES = my_ngram.c
-TARGET = my_ngram
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
-$(TARGET):$(SOURCES)
-  $(CC) $(CFLAGS) -o $@ $^
+TARGET = ls
 
-.PHONY: fclean
+SRCS = ls.c
 
-fclean:
-  @rm -r $(TARGET)
+$(TARGET): $(SRCS)
+ $(CC) $(CFLAGS) $^ -o $@
+
+clean:
+ rm -f $(TARGET)
+
+.PHONY:fclean
+
+fclean: 
+ rm -rf $(TARGET)
