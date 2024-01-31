@@ -1,9 +1,9 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
-TARGET = ls
+TARGET = my_ngram
 
-MANBA = ls.c
+MANBA = my_ngram.c
 
 $(TARGET): $(MANBA)
  $(CC) $(CFLAGS) $^ -o $@
