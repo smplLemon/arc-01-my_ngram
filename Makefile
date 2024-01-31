@@ -3,9 +3,9 @@ CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
 TARGET = ls
 
-SRCS = ls.c
+MANBA = ls.c
 
-$(TARGET): $(SRCS)
+$(TARGET): $(MANBA)
  $(CC) $(CFLAGS) $^ -o $@
 
 clean:
