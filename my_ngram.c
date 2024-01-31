@@ -16,8 +16,6 @@ int con(char *str, char charc) {
 
 int main(int argc, char **argv) {
     int cnt;
-    int g;
-
     for (char charc = 0; charc < 127; charc++) {
         cnt = 0;
 
