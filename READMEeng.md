@@ -1,4 +1,4 @@
-#My Ngram
+# My Ngram
 This code is an implementation of a technology that counts the number of repetitions of entered characters, called *Ngram*.
 
 The code was written by [Abdussamad Turdixojayev](https://github.com/Abuuu2007).
