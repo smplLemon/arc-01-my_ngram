@@ -1,142 +1,137 @@
-# arc-01-my_ngram
-<div class="card-block">
-<div class="row">
-<div class="col tab-content">
-<div class="tab-pane active show" id="subject" role="tabpanel">
-<div class="row">
-<div class="col-md-12 col-xl-12">
-<div class="markdown-body">
-<p class="text-muted m-b-15">
-</p><h1>My Ngram</h1>
-<p>Remember to git add &amp;&amp; git commit &amp;&amp; git push each exercise!</p>
-<p>We will execute your function with our test(s), please DO NOT PROVIDE ANY TEST(S) in your file</p>
-<p>For each exercise, you will have to create a folder and in this folder, you will have additional files that contain your work. Folder names are provided at the beginning of each exercise under <code>submit directory</code> and specific file names for each exercise are also provided at the beginning of each exercise under <code>submit file(s)</code>.</p>
-<hr>
-<table>
-<thead>
-<tr>
-<th>My Ngram</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Submit directory</td>
-<td>.</td>
-</tr>
-<tr>
-<td>Submit files</td>
-<td>Makefile - *.c - *.h</td>
-</tr>
-<tr>
-<td>Languages</td>
-<td>It needs to be completed in the language you are working on right now. If you are doing Bootcamp Javascript, then javascript (file extension will be .js). If you are doing Bootcamp Ruby, then Ruby (file extension will be .rb). It goes the same for Python, Java, C++, Rust, ...</td>
-</tr>
-</tbody>
-</table>
-<h3>Description</h3>
-<h3>SPECIFICATIONS</h3>
-<p>Write a program my_ngram; It will count the number of occurrences per character.</p>
-<h3>NAME</h3>
-<p>my_ngram</p>
-<h3>SYNOPSIS</h3>
-<p>my_ngram text [text2, text3]</p>
-<h3>DESCRIPTION</h3>
-<p>In computational linguistics and probability, an n-gram is a contiguous sequence of n items from a given sample of text or speech. The items can be phonemes, syllables, letters, words or base pairs according to the application. The n-grams typically are collected from a text or speech corpus. When the items are words, n-grams may also be called shingles.</p>
-<p>Google Inc. has used this technique to improve the completion of its Search Engine. The program was developed by Jon Orwant and Will Brockman and released in mid-December 2010.</p>
-<p>My Ngram will take 1 or multiple strings as arguments.</p>
-<p>It will display, one per line, each character and the numbers of times it appears.</p>
-<p>Order will be alphanumerical.</p>
-<p><strong>Example 00</strong></p>
-<pre class=" language-plain"><code class=" language-plain">$&gt;./my_ngram "abcdef"
-a:1
-b:1
-c:1
+# My Ngram
+This code is an implementation of a technology that counts the number of repetitions of entered characters, called *Ngram*.
+
+The code was written by [Abdussamad Turdixojayev](https://github.com/Abuuu2007).
+
+## Content
+* [Description](#description)
+* [Usage](#usage)
+* [Code component](#code-component)
+* [Main function](#main-function)
+## Description
+I was given the task of creating an Ngram that takes one or more strings as arguments, which then displays each character and the number of repetitions in alphanumeric order.
+
+But with all this, you can use a limited number of functions, namely:
+
+* printf(3)
+* write(2)
+
+Here I also used all the functions except `write()`.
+
+## Usage
+### Start the game
+In order to run my_ngram, you need to enter into the console with the appropriate arguments, for example:
+```
+$ ./my_ngram "Hello World!"
+```
+In this case, the following text will be displayed:
+```
+ :1
+!:1
+H:1
+W:1
 d:1
 e:1
-f:1
-$&gt;
-</code></pre>
-<p><strong>Example 01</strong></p>
-<pre class=" language-plain"><code class=" language-plain">$&gt;./my_ngram "        "
- :8
-$&gt;
-</code></pre>
-<p>8 spaces :-)</p>
-<p><strong>Example 02</strong></p>
-<pre class=" language-plain"><code class=" language-plain">$&gt;./my_ngram "aaabb" "abc"
-a:4
-b:3
-c:1
-$&gt;
-</code></pre>
-<h3>Technical information:</h3>
-<ol>
-<li>(If you are doing this as project) you must create a Makefile, and the output is the command itself</li>
-<li>You can use:</li>
-</ol>
-<ul>
-<li>printf(3)</li>
-<li>write(2)</li>
-</ul>
-<ol start="3">
-<li>You can NOT use:</li>
-</ol>
-<ul>
-<li>Any functions/syscalls which does not appear in the previous list</li>
-<li>Yes, it includes <strong>exit</strong>
-</li>
-<li>Multiline macros are forbidden</li>
-<li>Include another .c is forbidden</li>
-<li>Macros with logic (while/if/variables/...) are forbidden</li>
-</ul>
-<h3>Requirements</h3>
-<ul>
-<li>Your code must be compiled with the flags <strong>-Wall -Wextra -Werror</strong>.</li>
-<li>Your makefile must have a clean &amp; fclean rules.</li>
-</ul>
-<p>Example of some rules for Makefiles:</p>
-<pre class=" language-plain"><code class=" language-plain">all : $(TARGET)
+l:3
+o:2
+r:1
+```
+## Code Component
+### Function `my_strlen`
+To begin with, I created a function similar to `strlen`, because... its use was prohibited:
+```c
+int my_strlen(char* p1){
+  int i = 0;
+  while(p1[i] != '\0')
+    i++;
+  return i;
+}
+```
+---
+### Function `bubbleSort`
+I’m creating a function that sorts characters incoming from the console in alphabetical order:
+```c
+char* bubbleSort(char* p1){
+  int len = my_strlen(p1);
+  char temp;
+  for(int i = 0; i < len; i++){
+    for(int j = 0; j < len-i-1; j++){
+      if(p1[j] > p1[j+1]){
+        temp = p1[j];
+        p1[j] = p1[j+1];
+        p1[j+1] = temp;
+      }
+    }
+  }
+   return p1;
+}
+```
+### Function `my_ngram`
+And finally, the `my_ngram` function itself, which displays the characters and the number of their repetitions:
+```c
+void my_ngram(char* p1){
+  int len = my_strlen(p1);
+  int duplicate = 1;
+  
+  for(int i = 0; i < len; i++){
+    for(int j = i + 1; j <= len; j++){
+      if(p1[i] == p1[j]){
+        duplicate +=1;
+        i++;
+      }
+      else{
+        printf("%c:%d\n", p1[i], duplic);
+        duplicate = 1;
+        break;
+      }
+    }
+  }
+}
+```
+## `Main` function
+By setting the `argc` and `argv` parameters to pass console arguments, I set a condition so that if the number of arguments is incorrect, the game will stop:
+```c
+int main(int argc, char* argv[]){
+  if (argc == 1){
+    printf("Error! No characters were entered.");
+    return 1;
+  }
+```
+---
+I am writing code that creates an array of characters, the length of which is equal to the length of the characters entered through the console:
+```c
+int len = 0;
 
-$(TARGET) : $(OBJ)
-	gcc $(CFLAGS) -o $(TARGET) $(OBJ)
+for(int i = 1; i < argc; i++)
+  len += my_strlen(argv[i]);
 
-$(OBJ) : $(SRC)
-	gcc $(CFLAGS) -c $(SRC)
-
-clean:
-	rm -f *.o
-
-fclean: clean
-	rm -f $(TARGET)
-
-re: fclean all
-</code></pre>
-<h3>Warnings</h3>
-<p>It's a bad practice to submit "object/binary files". Gandalf will reject your project if you submit your binary. (with the following message: "pushed file wrong format")</p>
-<p></p>
-</div>
-
-</div>
-</div>
-</div>
-<div class="tab-pane" id="resources" role="tabpanel">
-<div class="row">
-<div class="col-xl-12">
-<div class="row text-center">
-<div class="col p-t-10 f-12">
-<p>
-
-</p>
-</div>
-</div>
-<div class="row text-center">
-<div class="col">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+char buf1[len];
+```
+---
+I equate the array of characters `buf1` to the characters that are entered through the console:
+```c
+int k = 0;
+  
+for(int i = 1; i < argc; i++){
+  int lensstr = my_strlen(argv[i]);
+  for(int j = 0; j < lensstr; j++){
+    buf1[k] = argv[i][j];
+    k++;
+  }
+buf1[k] = '\0';
+}
+```
+---
+* First I sort the characters in alphabetical order using `bubbleSort`.
+* Next I use `my_ngram` to display the characters and the number of repetitions.
+* The program ends.
+```c
+  char* bufsort = bubbleSort(buf1);
+  
+  my_ngram(bufsort);
+    
+  return 0;
+}
+```
+---
+### The note! This Readme file was written and translated from Russian, therefore some semantic errors may occur
