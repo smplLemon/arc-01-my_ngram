@@ -4,7 +4,7 @@
 
 ## Task
 
-This program counts the occurrences of characters in command-line arguments and sorts them alphabetically.s
+This program counts the occurrences of characters in command-line arguments and sorts them alphabetically.s   
 
 ## Description
 
