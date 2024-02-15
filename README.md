@@ -1,9 +1,9 @@
 # arc-01-my_ngram
 # description
-*Kodim haqida tavsiv berib otadigan bolsam bu kod bizga mat kritishimiz soraydi biz matn kritiamiz matinda neshta harf borligini sanaydi keyin harflarni alifbo tartibida qoyib chqadi!
+*If I give a description about my code, this code asks us to read the text, we count how many letters are there in the text of the text, and then it leaves the letters in alphabetical order!
 # Task
-*Kodimning vazifasi haqida qisqacha aytib otadiga bolsam "countNGrams" degan funksiya bor u funksiya bizga harflarni nechta ekanligini sanab beradi va osha harfni oldiga nechta ekanligini qoyib chqadi harflarni esa alifbo tartibida qoyib chqadi va oxirida main funksiyasiga yonaltrib bizga yozilgan harfni harfni funksiyaga birlashtirishga yordam beradi!
+*Let me tell you briefly about the function of my code, there is a function called "countNGrams". This function counts the number of letters and puts the number of letters in front of it, and puts the letters in alphabetical order, and at the end of the main function, it helps us combine the written letter into the function!
 # usage
-*Kodni qanday foydalanish kerak ekanligini qisqacha chuntrib otaman siz matn kiritasiz kiritgan matnizni sanab beradi va nechtaligini yoziga qoyib harflarni alifbo tartibida qoyib chqadi
+*I will give a brief summary of how to use the code, you enter text, it counts the text you entered and writes down the number of letters in alphabetical order
 # instalition
-*bu kodni ishlatish uchun gcc dan foydalanasiz
+*you use gcc to run this code
