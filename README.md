@@ -20,8 +20,3 @@ To build the program, simply run make:
 This will compile the source files and generate the executable.
 
 To clean up the build artifacts, run:
-
-
-## License
-
-This program is released under the MIT license. See the [LICENSE](LICENSE) file for more details.
