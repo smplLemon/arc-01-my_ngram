@@ -1,11 +1,13 @@
-CC = gcc
-CFLAGS = -g -Wall -Wextra -Werror
-COURCES = my_gram.c
-TARGET = my_gram
+CC=gcc
+CFLAGS=-Wall -Wextra -std=c99
+TARGET=ngram
+OBJS=ngram.o
 
-$(TARGET):$(COURCES)
- $(CC) $(CFLAGS) -o $@ $^
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+ngram.o: ngram.c
+	$(CC) $(CFLAGS) -c $<
+
 clean:
- rm -f *.o
-fclean: clean
- rm -f $(TARGET)
+	rm -f $(TARGET) $(OBJS)
