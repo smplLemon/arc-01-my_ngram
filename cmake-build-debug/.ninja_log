@@ -1,0 +1,6 @@
+# ninja log v5
+0	133	7273519878881704	CMakeFiles/arc_season_C.dir/main.c.obj	74e122323f6c5d68
+1	157	7283016863958761	build.ninja	f8f067b536357d0f
+133	305	7273519880506237	arc_season_C.exe	9fdd0b4d4a296041
+3	180	7283061583125770	CMakeFiles/arc_season_C.dir/main.c.obj	49e21010b2d18c4
+181	404	7283061585322415	arc_season_C.exe	9fdd0b4d4a296041
