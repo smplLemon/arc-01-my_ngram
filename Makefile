@@ -16,6 +16,6 @@ clean:
 	rm -f *.o
 
 fclean : clean
-	rgim -f $(TARGET) *.exe
+	rm -f $(TARGET) *.exe
 
 re: fclean all
