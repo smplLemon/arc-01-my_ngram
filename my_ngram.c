@@ -12,4 +12,4 @@ void count_characters(const char* text) {
             printf("%c:%d\n", i, counts[i]);
         }
     }
-}  
+}
