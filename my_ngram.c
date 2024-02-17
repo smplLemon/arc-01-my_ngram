@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#define SIZE 200
+#define SIZE 128
 
 void my_ngram(int ac, char** av)
 {
@@ -13,7 +13,7 @@ void my_ngram(int ac, char** av)
     {
         for (j = 0; av[i][j] != '\0'; j++)
         {
-            ch = tolower(av[i][j]);
+            ch = av[i][j];
             count[(unsigned char)ch]++;
         }
     }
