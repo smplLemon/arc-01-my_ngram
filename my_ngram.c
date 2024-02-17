@@ -20,7 +20,7 @@ void my_ngram(int ac, char** av)
     {
         if (count[c] > 0)
         {
-            printf("%c: %d\n", c, count[c]);
+            printf("%c:%d\n", c, count[c]);
         }
     }
 }
