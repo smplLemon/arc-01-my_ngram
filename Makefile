@@ -3,10 +3,10 @@ CFLSGS = -g -Wall -Wextra -Werror
 SOURCE = my_ngram.c
 TARGET = my_ngram
 
-$(TARGET): $(SOURCE)
-    $(CC) $(CFLSGS) -o $@ $^
+$(TARGET):$(SOURCE)
+	$(CC) $(CFLSGS) -o $@ $^
 
-.PHONY: fclean
+.PHONY: fclean 
 
 fclean:
-    @rm -r $(TARGET)
+	@rm -r $(TARGET)

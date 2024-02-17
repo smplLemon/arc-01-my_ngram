@@ -1,45 +1,55 @@
 #include <stdio.h>
-#define ASCII_SIZE 256
+
+#define CHARACTERS 126
+
+int my_isascii(char *string)
+{
+    int i = 0;
+    while (string[i])
+    {
+        i++;
+    }
+
+    return i;
+}
 
 int my_strlen(char *str)
 {
     int i = 0;
-    int res = 0;
+
     do
     {
-        res += 1;
-        i += 1;
-    } while (str[i] != '\0');
-    return res;
-}
-
-void strings_count(char *param_1)
-{
-    int i = 0;
-    int result[ASCII_SIZE] = {0};
-    for (; i < my_strlen(param_1); i++)
-    {
-        if (param_1[i])
-        {
-            result[param_1[i]]++;
-        }
-    }
-
-    while (i < ASCII_SIZE)
-    {
-        if (result[i])
-        {
-            printf("%c: %d\n", i, result[i]);
-        }
         i++;
-    }
+    } while (str[i]);
+
+    return i;
 }
 
-void my_ngram(int argc, char **argv)
+void my_ngram(int argumentCount, char **argumentValue)
 {
-    for (int i = 1; i < my_strlen(argv[i]); i++)
+    int countCharacters[CHARACTERS] = {0};
+    int i, j, c_i, res;
+
+    for (i = 1; i < argumentCount; i++)
     {
-        strings_count(argv[i]);
+        c_i = my_strlen(argumentValue[i]);
+        res = my_isascii(argumentValue[i]);
+
+        if (res > 0)
+        {
+            for (j = 0; j < c_i; j++)
+            {
+                countCharacters[(unsigned char)argumentValue[i][j]]++;
+            }
+        }
+    }
+
+    for (i = 0; i < CHARACTERS; i++)
+    {
+        if (countCharacters[i] > 0)
+        {
+            printf("%c: %d\n", i, countCharacters[i]);
+        }
     }
 }
 
