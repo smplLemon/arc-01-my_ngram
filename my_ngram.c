@@ -13,7 +13,7 @@ void my_ngram(int nuk, char** sss)
     {
         for (b = 0; sss[i][b] != '\0'; b++)
         {
-            a = tolower(sss[i][b]);
+            a = sss[i][b];
             count[(unsigned char)a]++;
         }
     }
