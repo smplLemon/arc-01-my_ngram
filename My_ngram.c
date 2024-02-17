@@ -21,12 +21,8 @@ void countNGrams(char *text) {
     }
 }
 
-int main() {
-    char text[100];
+int main(int argc, char *argv[]) { 
     printf("Matnni kiriting: ");
-    scanf("%s", text);
-
-    countNGrams(text);
-
-    return 0;
+    scanf("%s", argv);
+    countNGrams(argv);
 }
