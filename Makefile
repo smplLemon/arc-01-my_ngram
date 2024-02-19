@@ -1,5 +1,5 @@
 TARGET = my_ngram
-SRC = main.c
+SRC = my_ngram.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 

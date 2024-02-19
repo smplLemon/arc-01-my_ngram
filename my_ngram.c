@@ -10,20 +10,8 @@ int my_strlen(char *param_1) {
     return i;
 }
 
-char *my_downcase(char *param_1) {
-    char *start_str = param_1;
-    while (*param_1 != '\0') {
-        if (*param_1 >= 'A' && *param_1 <= 'Z') {
-            *param_1 = *param_1 + 32;
-        }
-        param_1++;
-    }
-    return start_str;
-}
 
 void my_ngram(char *arr, int size) {
-
-    arr = my_downcase(arr);
     for (int i = 0; i < size - 1; ++i) {
         for (int j = 0; j < size - 1; ++j) {
             if (arr[j] > arr[j + 1]) {

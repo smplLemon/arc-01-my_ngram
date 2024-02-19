@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/lomak/CLionProjects/untitled1/arc_season_C
+# Install script for directory: C:/Users/lomak/projects/arc-01-my_ngram
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/lomak/CLionProjects/untitled1/arc_season_C/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/lomak/projects/arc-01-my_ngram/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

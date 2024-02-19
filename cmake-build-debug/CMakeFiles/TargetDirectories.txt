@@ -1,3 +1,3 @@
-C:/Users/lomak/CLionProjects/untitled1/arc_season_C/cmake-build-debug/CMakeFiles/arc_season_C.dir
-C:/Users/lomak/CLionProjects/untitled1/arc_season_C/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/lomak/CLionProjects/untitled1/arc_season_C/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/lomak/projects/arc-01-my_ngram/cmake-build-debug/CMakeFiles/arc_season_C.dir
+C:/Users/lomak/projects/arc-01-my_ngram/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lomak/projects/arc-01-my_ngram/cmake-build-debug/CMakeFiles/rebuild_cache.dir
