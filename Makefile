@@ -1,7 +1,7 @@
 CFLAGS = -Wall -Wextra -Werror
 TARGET = my_ngram
-SRC = $(TARGET).c
 OBJ = $(TARGET).o
+SRC = $(TARGET).c
 
 all: $(TARGET)
 
