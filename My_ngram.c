@@ -11,7 +11,7 @@ void countNGrams(char *text) {
     int nGramCounts[256] = {0};
     for (int i =  0; i < n; i++) {
         char ch = text[i];
-        nGramCounts[ch]++;
+        nGramCounts[(int)ch]++;
     }
 
     for (int i =  0; i <  256; i++) {
@@ -21,9 +21,12 @@ void countNGrams(char *text) {
     }
 }
 
-int main(int argc, char *argv[]) {  
-    char text[256]; 
+int main(int argc, char *argv[]) {   
+    (void)argc;
+    (void)argv; 
+
+    char text[256];  
     printf("Matnni kiriting: ");
-    scanf("%s", text); 
+    scanf("%s", text);  
     countNGrams(text);
 }
