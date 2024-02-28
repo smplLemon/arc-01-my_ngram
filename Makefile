@@ -9,4 +9,4 @@ $(TARGET) : $(SOURCES)
 .PHONY: clean
 
 fclean: clean
-  rm -f $(TARGET)
+  m -f $(TARGET)
