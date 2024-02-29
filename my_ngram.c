@@ -1,30 +1,31 @@
- #include <stdio.h>
- #include <ctype.h>
+#include <stdio.h>
+#include <ctype.h>
 
-#define SIZE 9999
+#define MAX_SIZE 2048
 
-void my_ngram(int add, char** bdd)
-{
-int num1 = 0;
-int num2 = 0;
-int count[SIZE] = {0};
+void My_Ngarm(int as, char** av){
+    int a = 0;
+    int c = 0;  
+    int count[MAX_SIZE] = {0};
 
-for (int i = 1; i < add; i++){
-    for (num2 = 0; bdd[i][num2] != '\0'; num2++){
-    num1 = bdd[i][num2];
-    count[(unsigned char)num1]++;
-    }
-}
-
-for (int a = 0; a < SIZE; a++){
-    if (count[a])
+    for(int i = 1; i < as; i++)
     {
-        printf("%c: %d\n", a, count[a]);
+        for (c = 0; av[i][c] != '\0'; c++)
+        {
+            a = av[i][c];
+            count[(unsigned char)a]++;
+        }
+    }
+    for (int j = 0; j < MAX_SIZE; j++)
+    {
+        if(count[j])
+        {
+            printf("%c: %d\n", j, count[j]);
         }
     }
 }
 int main(int argc, char **argv)
 {
-    my_ngram(argc, argv);
+    My_Ngarm(argc, argv);
     return 0;
 }

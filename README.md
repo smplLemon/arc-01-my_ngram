@@ -1,35 +1,14 @@
-# My Ngram
+# Ngram
 
-This program, written in C, calculates the frequency of characters in a given set of strings passed through the command line arguments. It utilizes n-gram analysis, specifically unigrams (single characters), to count the occurrences of each character.
+This program is a simple implementation of a character frequency counter named `My_Ngarm`. It takes input from the command line arguments and calculates the frequency of each character encountered in those arguments.
 
-## Usage
+## Compilation Instructions
 
-To use this program, follow these steps:
+To compile the program, you can use any C compiler such as `gcc`. Simply navigate to the directory containing the source code file (`your_file_name.c`) and execute the following command in your terminal:
 
-1. **Compilation**: Compile the program using a C compiler. For example, using GCC:
-    ```
-    gcc -o ngram_counter ngram_counter.c
-    ```
+```bash
+gcc -o character_counter your_file_name.c
 
-2. **Execution**: Run the compiled program and pass the strings as command line arguments.
-    ```
-    ./ngram_counter string1 string2 ...
-    ```
+./character_counter string1 string2 ... stringN
 
-## Example
-
-Suppose you want to count the frequency of characters in the strings "hello" and "world", you would run:
-    ```
-    ./ngram_counter hello world
-    ````
-The program will output the frequency of each character present in the provided strings.
-
-## Notes
-
-- The program considers only ASCII characters.
-- It counts each character's frequency independently, ignoring any other characteristics or patterns.
-- Non-alphanumeric characters are also counted.
-- The maximum length of the input strings is limited by the `SIZE` constant defined in the code.
-
-Feel free to modify and extend the program according to your needs. Happy coding!
-
+./character_counter hello world
