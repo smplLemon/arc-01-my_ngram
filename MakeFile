@@ -1,16 +1,10 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+TARGET = my_ngram
+SRC = my_ngram.c
 
-TARGET = counter_characts
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
-all: $(TARGET)
-
-$(TARGET): $(TARGET).c
-	$(CC) $(CFLAGS) -o $@ $<
-
-clean:
+fclean:
 	rm -f $(TARGET)
-
-fclean: clean
-
-re: fclean all
