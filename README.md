@@ -1,18 +1,39 @@
-## My ngram
+## My_ngram 
+## Description
+The purpose of this application is to tally the frequency of each character in a specified text or multiple texts using the concept of n-grams, where n equals 1, indicating individual character consideration.
 
-### Description
-Imagine you are in 1990 and your printing supervisor asks you how many letters are used in words, what would you do? This is a project you may count characters?
-The program takes one or more text arguments and calculates the frequency of each character in the input text. It then prints out the counts of each character along with the character itself.
-### Task
-In the My ngram project, the task was to check the number of times each letter and output it in alphabetical order
+## Installation
+To set up the program, adhere to these steps:
 
-### Usage
-- Compile the program using a C compiler:
+1. Clone the repository or download the source code.
+2. Navigate to the project directory using a terminal.
+3. Build the program by executing the following command:
 
-```sh
-gcc -o ngram ngram.c
+```bash
+make
 ```
-- Run the program with one or more text arguments:
-```sh
-./ngram text [text2, text3...]
+This command compiles the code, generating the executable file.
+
+## Usage
+To employ the program, proceed as follows:
+
+1. Run the executable file with the command:
+   Replace text1, text2, etc. with the desired texts for analysis.
+    
+     ```./my_ngram text1 [text2, text3]```
+   
+
+2. The program will then calculate and display the occurrences of each character in the input texts.
+
+## Example
+
+```
+ulugbe@ulugbe-2 arc-01-my_ngram % make
+gcc  -Wall -Wextra -Werror  -o my_ngram my_ngram.c
+ulugbe@ulugbe-2 arc-01-my_ngram % ./my_ngram "asdvcsasd"
+a:2
+c:1
+d:2
+s:3
+v:1
 ```

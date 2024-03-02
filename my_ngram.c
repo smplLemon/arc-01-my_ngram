@@ -21,7 +21,7 @@ void my_ngram(int argc, char **argv)
     {
         if (count[z] != 0)
         {
-            printf("%c %d\n", z, count[z]);
+            printf("%c:%d\n", z, count[z]);
         }
         z++;
     }
