@@ -1,4 +1,4 @@
-SRC = C.c
+SRC = ngram.c
 TARGET = my_ngram
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
