@@ -1,24 +1,48 @@
-## Welcome to Ngram
+# Ngram
 
-## Description
-This code is a C program that parses the characters in the command line arguments passed and prints the number of characters encountered.
+This C program analyzes the frequency of characters in a given set of strings. It calculates the occurrences of each ASCII character within the provided strings and displays the results.
 
-## How to use
-1. Make sure you have a C compiler installed (eg gcc).
-2. Save this code to a file with the extension ".c".
-3. Compile the code using the command: `gcc file_name.c -o executable_file`.
-4. Run the program by passing the command line arguments.
-    Example usage: `./executable_file argument1 argument2 ...`.
+## Usage
 
-## Functions
-- `my_isascii`: function to determine the number of characters in a line.
-- `my_strlen`: function to determine the length of a string.
-- `my_ngram`: main function that parses the characters in the passed arguments and prints the number of characters encountered.
+To use this program, follow these steps:
 
-## How does it work
-The program takes command line arguments and counts the number of characters encountered in each argument. Then it displays the number of each unique symbol and its frequency.
+1. Compile the program by executing the following command in your terminal:
+```
+gcc -o ngram ngram.c
+```
 
-I hope this information helps you understand and use this code. If you have any additional questions, don't hesitate to reach out!
+2. Run the compiled program with your desired strings as arguments. For example:
 
-<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
-<span><img alt="Qwasar SV -- Software Engineering School's Logo" src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
+```
+./ngram string1 string2 string3 ...
+```
+Replace `string1`, `string2`, etc., with the strings you want to analyze.
+
+## Functionality
+
+- `my_isascii`: This function determines the length of a string by iterating through its characters until it reaches the null terminator.
+- `my_strlen`: This function calculates the length of a string by incrementing a counter until it encounters the null terminator.
+- `my_ngram`: This is the main function responsible for analyzing the frequency of characters in the provided strings. It iterates through each string, counting the occurrences of each ASCII character and storing the counts in an array. Finally, it prints out the counts for each character that occurred at least once.
+
+## Compilation
+
+- The code can be compiled using any standard C compiler, such as `gcc`.
+
+## Example
+
+Suppose you have compiled the program and want to analyze the frequency of characters in the strings "hello" and "world". You would run the program as follows:
+```
+./ngram hello world
+```
+
+The output would display the count of each ASCII character present in the given strings.
+
+## Note
+
+- This program considers only ASCII characters with codes ranging from 0 to 126.
+- It ignores non-ASCII characters.
+
+## Contribution
+
+Feel free to contribute to this project by suggesting improvements or reporting any issues you encounter. You can submit your contributions via pull requests or by opening an issue on the project's repository.
+
