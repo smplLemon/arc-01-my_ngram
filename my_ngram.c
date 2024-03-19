@@ -6,7 +6,7 @@
 
 void counting_characters(const char *argv[], int number_words, int n, int *argc)
 {
-    for (int i = 0; i < number_words; i++) 
+    for (int i = 0; i < number_words; i++)
     {
         const char *word = argv[i];
         for (size_t j = 0; j < strlen(word); j++)
@@ -14,7 +14,7 @@ void counting_characters(const char *argv[], int number_words, int n, int *argc)
             int index_1 = 0;
             for (size_t k = j; k < j + n && word[k] != '\0'; k++)
             {
-                index_1 = index_1 * 256 + tolower(word[k]);
+                index_1 = index_1 * 512 + (unsigned char)word[k];
             }
             argc[index_1]++;
         }
@@ -33,6 +33,7 @@ void counting_characters(const char *argv[], int number_words, int n, int *argc)
         }
     }
 }
+
 int main(int argc, const char *argv[])
 {
     if (argc < 2)
