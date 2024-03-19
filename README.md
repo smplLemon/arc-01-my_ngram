@@ -13,7 +13,7 @@ The `int main()` function accepts command line arguments as parameters. An integ
  Again, int main() checks if a character is entered after `./a.out` and if not, warns the user and returns 1.
  The `free()` function closes an array opened for an array of integers
 
-`counting_characters()` function: This function takes as an argument a string argument representing the number of characters. I read multiple words, i.e. continue even if NULL is encountered, i.e. I changed the loops to read the next one as well. In the inner loop, and calculates the index value by multiplying it by 256 and adding the ASCII value of the character. Basically this code reads numbers and letters and determines how much the bill is. This function also adds code to check whether the character entered via the conditional operator is a space or not. That said, this code works for spaces as well. I am a handler from the "tolower()" function. This function converts uppercase letters to lowercase letters.
+`counting_characters()` function: This function takes as an argument a string argument representing the number of characters. I read multiple words, i.e. continue even if NULL is encountered, i.e. I changed the loops to read the next one as well. In the inner loop, and calculates the index value by multiplying it by 256 and adding the ASCII value of the character. Basically this code reads numbers and letters and determines how much the bill is. This function also adds code to check whether the character entered via the conditional operator is a space or not. That said, this code works for spaces as well.
 
  Calculating string length is convenient with size_t so I used it in my code
 
