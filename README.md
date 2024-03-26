@@ -8,6 +8,11 @@ The N-Gram Project in C is a simple implementation of n-gram analysis, a techniq
 "
 The primary task of this project is to analyze a text and generate n-grams of a specified size. In the context of this implementation, n-grams refer to consecutive sequences of words in the input text. The project aims to facilitate a straightforward exploration of n-grams, enabling users to observe patterns and relationships within the provided textual data.
 "
+# INSTALLATION:
+  The project seems to be a simple C program, and it doesn't require any special installation steps other than compiling the code.
+  Before using, make sure that you have the GCC compiler installed and the make utility installed.
+  Open a terminal and run the command: 
+
 # Usage
 " To use the N-Gram Project in C, follow these steps:
 

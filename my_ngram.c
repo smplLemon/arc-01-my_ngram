@@ -1,41 +1,34 @@
 #include <stdio.h>
-#include <stdlib.h>
-#define MAX_ARRAY_SIZE 128
+#include <string.h>
 
-void my_integer(int* digits, char* str)
+int my_strlen(char* p1){
+    int i = 0;
+    while(p1[i]){
+        i++;
+    }
+    return i;
+}
+
+void counter(int argc, char **argv) 
 {
-    int index = 0;
-    while (str[index] != '\0')
-    {
-        if (str[index] != '"')
+    int count;
+
+    for(char character = ' '; character <= 'z'; character++){
+        count = 0;
+        for(int k = 1; k < argc; k++){
+            for(int j = 0; j < my_strlen(argv[k]); j++){
+                if(character == argv[k][j]){
+                    count++;
+                }
+            }
+        } 
+        if(count > 0)
         {
-            digits[(int)str[index]]++;
-        }
-        index++;
+            printf("%c:%d\n", character, count);
+        }     
     }
 }
-
-void my_counters(int* counts, int limit)
-{
-    int weight = 0;
-    while (weight < limit)
-    {
-        if (counts[weight] > 0)
-        {
-            printf("%c:%i\n", weight, counts[weight]);
-        }
-        weight++;
-    }
+int main(int argc, char **argv) {
+    counter(argc,argv);
+    return 0;
 }
-
-int main(int argc, char** argv)
-{
-    int i, array[MAX_ARRAY_SIZE] = {0};
-    for (i = 1; i < argc; i++)
-    {
-        my_integer(array, argv[i]);
-    }
-    my_counters(array, MAX_ARRAY_SIZE);
-    return EXIT_SUCCESS;
-}
-
