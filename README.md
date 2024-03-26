@@ -17,11 +17,7 @@ The `int main()` function accepts command line arguments as parameters. An integ
 
  Calculating string length is convenient with size_t so I used it in my code
 
- Next, using a for loop, it prints the character and the number representing how many times it is repeated
-
-In addition, I used the `sleep()`: function in this code.The sleep() function is a function provided by the C standard library that suspends the execution of a program for a specified number of seconds. It is often used to introduce a delay or pause in the program's execution. This will print one by one to the terminal, that is, when you compile the code, the message will be output in rows instead of all at once.
-    
- You will definitely see this when you try using the code.
+ Next, using a for loop, it prints the character and the number representing how many times it is repeated.
 
 # Installation
 
