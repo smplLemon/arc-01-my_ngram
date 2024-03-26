@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <ctype.h>
 #include <string.h>
 
@@ -24,12 +23,6 @@ void counting_characters(const char *argv[], int number_words, int n, int *argc)
         if (argc[i] > 0)
         {
             printf("%c:%d\n", i, argc[i]);
-            sleep(1);
-        }
-        else if (i == ' ')
-        {
-            printf("Space:%d\n", argc[i]);
-            sleep(1);
         }
     }
 }
