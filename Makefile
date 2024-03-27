@@ -6,7 +6,7 @@ SRC = my_ngram.c
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
-.Phony:fclean
+.PHONY:fclean
 
 fclean:
 	rm -f $(TARGET)
