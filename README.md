@@ -16,4 +16,4 @@ To use the program, run the compiled executable with command-line arguments. Eac
 ```
 
 ## The core team
-Xusnora Amanova
+Xusnora Omanova
