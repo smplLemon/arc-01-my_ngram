@@ -10,9 +10,9 @@ int main(int argc, char *argv[]) {
         char *str = argv[i];
 
         while (*str) {
-            char ch = tolower(*str);
+            char ch = (*str);
             if (isalnum(ch)) { 
-                char_counts[ch]++;
+                char_counts[(int)ch]++;
             }
             str++;
         }
