@@ -1,7 +1,7 @@
 #include<stdio.h>
  #include<string.h>
 
-void c_occurrences(int length, char **text){
+void c_char_occurrences(int length, char **text){
   int i, j;
   int k[128] = {0};//ASCII table characters
     for(i=1; i<length;i++){
@@ -18,6 +18,6 @@ void c_occurrences(int length, char **text){
 
 }
 int main(int argc, char **argv){
-    c_occurrences(argc,argv);
+    c_char_occurrences(argc,argv);
     return 0;
 }
